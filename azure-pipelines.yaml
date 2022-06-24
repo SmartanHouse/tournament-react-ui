@@ -1,8 +1,6 @@
 jobs:
   - job: BuildPublish
     displayName: "Build and Publish"
-    pool:
-      vmImage: ubuntu-latest
     steps:
       - script: npm install
         displayName: "Install Dependencies"
