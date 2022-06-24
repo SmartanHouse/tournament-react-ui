@@ -1,6 +1,8 @@
 jobs:
   - job: BuildPublish
     displayName: "Build and Publish"
+    pool:
+      name: default
     steps:
       - script: npm install
         displayName: "Install Dependencies"
