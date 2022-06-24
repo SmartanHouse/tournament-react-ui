@@ -2,7 +2,11 @@ name: Blob storage website CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - master
+  pull_request:
+    branches:
+      - users/tiju/azure_pipelines
 
 jobs:
   deploy:
