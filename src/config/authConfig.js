@@ -1,8 +1,10 @@
+import configData from '../config.json'
+
 export const msalConfig = {
   auth: {
-    clientId: "*********",
-    authority: "*************",
-    redirectUri: "http://localhost:3000/",
+    clientId: configData.MSAL_CLIENT_ID,
+    authority: configData.MSAL_AUTHORITY,
+    redirectUri: configData.MSAL_REDIRECT_URI,
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
