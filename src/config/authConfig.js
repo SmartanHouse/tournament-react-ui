@@ -1,9 +1,9 @@
 export const msalConfig = {
   auth: {
-    clientId: `${process.env["REACT_APP_AAD_APP_CLIENT_ID"]}`,
-    authority: `https://login.microsoftonline.com/${process.env["REACT_APP_AAD_APP_TENANT_ID"]}`,
-    redirectUri: `${process.env["REACT_APP_AAD_APP_REDIRECT_URI"]}`,
-    postLogoutRedirectUri: `${process.env["REACT_APP_AAD_APP_REDIRECT_URI"]}`
+    clientId: "cd66b22b-4062-46d3-ac86-28ea3f8e3e43",
+    authority: "https://login.microsoftonline.com/4338217c-3f51-49a5-838c-2b094bdef8ea/",
+    redirectUri: "https://tournamentwebdev.z13.web.core.windows.net",
+    postLogoutRedirectUri: "https://tournamentwebdev.z13.web.core.windows.net"
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
