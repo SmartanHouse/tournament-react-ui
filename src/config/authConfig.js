@@ -1,10 +1,9 @@
-import configData from '../config.json'
-
 export const msalConfig = {
   auth: {
-    clientId: configData.MSAL_CLIENT_ID,
-    authority: configData.MSAL_AUTHORITY,
-    redirectUri: configData.MSAL_REDIRECT_URI,
+    clientId: `${process.env["REACT_APP_AAD_APP_CLIENT_ID"]}`,
+    authority: `https://login.microsoftonline.com/${process.env["REACT_APP_AAD_APP_TENANT_ID"]}`,
+    redirectUri: `${process.env["REACT_APP_AAD_APP_REDIRECT_URI"]}`,
+    postLogoutRedirectUri: `${process.env["REACT_APP_AAD_APP_REDIRECT_URI"]}`
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
