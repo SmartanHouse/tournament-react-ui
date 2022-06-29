@@ -1,27 +1,26 @@
 import React from 'react';
-import { Card, ListGroup } from 'react-bootstrap';
 
 /**
  * Renders information about the user obtained from Microsoft Graph
  */
 export const ProfileData = (props) => {
     return (
-        <Card style={{ width: '50rem' }}>
-            <Card.Header>Profile</Card.Header>
-            <ListGroup variant="flush">
-                <ListGroup.Item>
+        <div style={{ width: '50rem' }}>
+            <div>Profile</div>
+            <ul variant="flush">
+                <li>
                     <strong>First Name: </strong> {props.graphData.givenName}
-                </ListGroup.Item>
-                <ListGroup.Item>
+                </li>
+                <li>
                     <strong>Last Name: </strong> {props.graphData.surname}
-                </ListGroup.Item>
-                <ListGroup.Item>
+                </li>
+                <li>
                     <strong>Email: </strong> {props.graphData.userPrincipalName}
-                </ListGroup.Item>
-                <ListGroup.Item>
+                </li>
+                <li>
                     <strong>Id: </strong> {props.graphData.id}
-                </ListGroup.Item>
-            </ListGroup>
-        </Card>
+                </li>
+            </ul>
+        </div>
     );
 };

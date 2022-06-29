@@ -1,6 +1,5 @@
 import { useMsal } from '@azure/msal-react';
 import { useState } from 'react';
-import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { loginRequest } from '../config/authConfig';
 import { callMsGraph } from '../config/graph';
 import { ProfileData } from './ProfileData';
@@ -42,37 +41,37 @@ export const ProfileContent = () => {
     }
     return (
         <>
-            <Container>
-                <Row>
-                    <Col>
+            <div>
+                <div>
+                    <div>
                         <h5 className="card-title">Welcome {name}</h5>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
+                    </div>
+                </div>
+                <div>
+                    <div>
                         {fetching && (
-                            <Spinner animation="border" role="status">
+                            <div animation="border" role="status">
                                 <span className="visually-hidden">
                                     Loading...
                                 </span>
-                            </Spinner>
+                            </div>
                         )}
                         {graphData && <ProfileData graphData={graphData} />}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
+                    </div>
+                </div>
+                <div>
+                    <div>
                         {!graphData && !fetching && (
-                            <Button
+                            <div
                                 variant="light"
                                 onClick={RequestProfileData}
                             >
                                 Show Profile Information
-                            </Button>
+                            </div>
                         )}
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
